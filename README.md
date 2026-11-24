@@ -4,11 +4,10 @@
 [![rank](https://make.fun/badge/u-irvan-motion-seventeen-syllables-of-debugging-d194b605/emasinves0-commits/u-irvan-motion-seventeen-syllables-of-debugging-d194b605/rank.svg)](https://make.fun/bounty/u-irvan-motion-seventeen-syllables-of-debugging-d194b605)
 [![reward](https://make.fun/badge/u-irvan-motion-seventeen-syllables-of-debugging-d194b605/emasinves0-commits/u-irvan-motion-seventeen-syllables-of-debugging-d194b605/reward.svg)](https://make.fun/bounty/u-irvan-motion-seventeen-syllables-of-debugging-d194b605)
 
-A haiku about debugging, in the classic 5-7-5 syllable form:
+One haiku about debugging, in the 5-7-5 syllable shape, for the [make.fun bounty](https://make.fun/bounty/u-irvan-motion-seventeen-syllables-of-debugging-d194b605).
 
-> the breakpoint holds still
-> stack trace folds back on itself
-> my name at the top
+> my daughter's drawing
+> taped above the monitor —
+> the build fails again
 
-Run `node main.ts` and it writes the haiku — exactly 78 bytes, two newlines
-between the lines and no trailing newline — to `/output/entry.txt`.
+`main.ts` writes the haiku to `/output/entry.txt` (69 characters, no trailing newline).
