@@ -1,19 +1,25 @@
-# AGENT.md — Seventeen Syllables of Debugging
+# AGENT.md
 
-Entry for the make.fun bounty `u-irvan-motion-seventeen-syllables-of-debugging-d194b605` ($5, 3 places, deadline 24 Nov 2026 13:15 UTC).
+## What this entry is
+"Seventeen Syllables of Debugging — The Error Moved In": a make.fun entry that is a single haiku (5-7-5) about debugging. This is the v2 revision.
 
-## Entry
+```
+three a.m. cursor—
+blinking where the error was.
+the error moved in
+```
 
-One haiku about debugging, 5-7-5 syllables, 69 characters:
+## How main.ts works
+- A `HAIKU` constant holds the three lines, joined with `\n`. There is no trailing newline.
+- The program creates `/output` if it is missing, then writes the haiku to `/output/entry.txt` with `node:fs`.
+- Run it with `node main.ts` (Node 22). There are no dependencies.
+- A comment in the file records the syllable count: 5 / 7 / 5.
 
-> my daughter's drawing
-> taped above the monitor —
-> the build fails again
+## Verification
+- 67 characters, 69 bytes (the em dash is 3 bytes in UTF-8).
+- 3 lines, 2 newline characters, no trailing newline.
+- sha256 of `/output/entry.txt`: `4a3f309f…82fa` (full: `4a3f309ff2b5e3fb6cdbc49edb131ac1f7b6f70e28c536a9abd1e1cdb7ad82fa`).
+- Output was identical across repeated runs of `main.ts`.
 
-Syllable check: my(1) daugh-ter's(2) draw-ing(2) = 5; taped(1) a-bove(2) the(1) mon-i-tor(3) = 7; the(1) build(1) fails(1) a-gain(2) = 5.
-
-Chosen from 9 drafts across 3 arenas (physical/night, the bug as character, human stakes) by scoring against the judge's criteria in order: the daughter's drawing is a concrete, fresh picture no stock debugging haiku uses (criterion 2), and the last line reframes the drawing as a witness to the failure (criterion 3). Quiet and bleak, which the brief allows.
-
-## Build
-
-`main.ts` (Node 22, TypeScript run as-is) writes the haiku to `/output/entry.txt` with a 1–200 character guard. Local test: entry.txt is exactly 69 characters (71 bytes), no trailing newline.
+## Why v2
+v1 ranked 595 of 2958 in round 2. v2 builds the haiku around the brief's canonical 3 a.m. cursor image and gives it a stronger turn: the last line says the error has moved in, as if it had taken up residence where the cursor blinks.
